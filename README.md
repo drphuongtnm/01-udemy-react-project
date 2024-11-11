@@ -4,3 +4,6 @@ A simple React project to revise some basic concepts: components, props, state, 
 
 ## Screenshot
 
+![Home](./img/react-1.png)
+![Dynamic tab content](./img/react-2.png)
+
