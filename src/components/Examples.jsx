@@ -23,6 +23,41 @@ export default function Examples() {
   }
   return (
     <Section title="Examples" id="examples">
+      <Tabs
+        button={
+          <>
+            <menu>
+              <TabButton
+                isSelected={selectedTopic === "components"}
+                onClick={() => handleClick("components")}
+              >
+                Components
+              </TabButton>
+              <TabButton
+                isSelected={selectedTopic === "jsx"}
+                onClick={() => handleClick("jsx")}
+              >
+                JSX
+              </TabButton>
+              <TabButton
+                isSelected={selectedTopic === "props"}
+                onClick={() => handleClick("props")}
+              >
+                Props
+              </TabButton>
+              <TabButton
+                isSelected={selectedTopic === "state"}
+                onClick={() => handleClick("state")}
+              >
+                State
+              </TabButton>
+            </menu>
+          </>
+        }
+      >
+        {tabContent}
+      </Tabs>
+
       {/* cách 1 */}
       {/* <menu>
         <TabButton
@@ -50,7 +85,9 @@ export default function Examples() {
           State
         </TabButton>
       </menu> */}
-      <menu>
+
+      {/* cách 2 */}
+      {/* <menu>
         <TabButton
           isSelected={selectedTopic === "components"}
           onClick={() => handleClick("components")}
@@ -75,9 +112,10 @@ export default function Examples() {
         >
           State
         </TabButton>
-      </menu>
+      </menu> */}
+
       {/* Cách 1 */}
-      {!selectedTopic ? (
+      {/* {!selectedTopic ? (
         <p>Please select a topic.</p>
       ) : (
         <div id="tab-content">
@@ -87,7 +125,7 @@ export default function Examples() {
             <code>{EXAMPLES[selectedTopic].code}</code>
           </pre>
         </div>
-      )}
+      )} */}
 
       {/* Cách 2 */}
       {/* {tabContent} */}
