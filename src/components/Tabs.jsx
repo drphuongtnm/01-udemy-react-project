@@ -1,7 +1,10 @@
-export default function Tabs({ children, button }) {
+export default function Tabs({ children, button, ButtonContainer = "menu" }) {
+  // const ButtonContainer = buttonContainer; // phãi ghi hoa chữ cái đầu
+
   return (
     <>
-      <menu>{button}</menu>
+      {/* Custom container */}
+      <ButtonContainer>{button}</ButtonContainer>
       {children}
     </>
   );
